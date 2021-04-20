@@ -50,8 +50,49 @@
                 </controls:SfButton>
             </StackLayout>
             <gauge:SfCircularGauge VerticalOptions="CenterAndExpand">
+                <gauge:SfCircularGauge.Headers>
+                    <gauge:Header
+                        FontAttributes="Bold"
+                        ForegroundColor="Black"
+                        Position="0.5,0.3"
+                        Text="Set"
+                        TextSize="16" />
+                    <gauge:Header
+                        FontAttributes="Bold"
+                        ForegroundColor="Black"
+                        Position="0.52,0.45"
+                        Text="22°"
+                        TextSize="45" />
+                    <gauge:Header
+                        ForegroundColor="Black"
+                        Position="0.5,0.6"
+                        Text="Actual temperature 17°" />
+                </gauge:SfCircularGauge.Headers>
                 <gauge:SfCircularGauge.Scales>
-                    <gauge:Scale />
+                    <gauge:Scale
+                        EndValue="36"
+                        Interval="1"
+                        ShowFirstLabel="False"
+                        ShowLabels="False"
+                        ShowTicks="False"
+                        StartValue="0">
+                        <gauge:Scale.Pointers>
+                            <gauge:RangePointer
+                                RangeStart="0"
+                                Color="Gray"
+                                Value="16.9" />
+                            <gauge:RangePointer
+                                RangeStart="17"
+                                Color="Red"
+                                Value="22" />
+                            <gauge:MarkerPointer
+                                MarkerHeight="20"
+                                MarkerShape="Circle"
+                                MarkerWidth="20"
+                                Color="Black"
+                                Value="22" />
+                        </gauge:Scale.Pointers>
+                    </gauge:Scale>
                 </gauge:SfCircularGauge.Scales>
             </gauge:SfCircularGauge>
             <controls:SfSegmentedControl
