@@ -31,6 +31,9 @@ namespace Thermostat.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            Syncfusion.Licensing.SyncfusionLicenseProvider
+                .RegisterLicense("NDMzNTM3QDMxMzkyZTMxMmUzMFdyL1BjcFhFWkF5bGJxSktQbXI1aWM0d0lPVEViZkNad2htd1lXRCtLd0k9");
+
             global::Xamarin.Forms.Forms.Init();
             
 			SfImageEditorRenderer.Init();

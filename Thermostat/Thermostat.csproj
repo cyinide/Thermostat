@@ -5,12 +5,12 @@
   </PropertyGroup>
 
 <ItemGroup>
-<PackageReference Include="Xamarin.Forms" Version="4.5.0.617"/>
-<PackageReference Include="Syncfusion.Xamarin.Buttons" Version="19.1.0.54"/>
-<PackageReference Include="Syncfusion.Xamarin.SfNumericUpDown" Version="19.1.0.54"/>
-<PackageReference Include="Syncfusion.Xamarin.SfNumericTextBox" Version="19.1.0.54"/>
-<PackageReference Include="Syncfusion.Xamarin.SfImageEditor" Version="19.1.0.54"/>
-<PackageReference Include="Syncfusion.Xamarin.SfGauge" Version="19.1.0.54"/>
+<PackageReference Include="Xamarin.Forms" Version="4.5.0.617" />
+<PackageReference Include="Syncfusion.Xamarin.Buttons" Version="19.1.0.54" />
+<PackageReference Include="Syncfusion.Xamarin.SfNumericUpDown" Version="19.1.0.54" />
+<PackageReference Include="Syncfusion.Xamarin.SfNumericTextBox" Version="19.1.0.54" />
+<PackageReference Include="Syncfusion.Xamarin.SfImageEditor" Version="19.1.0.54" />
+<PackageReference Include="Syncfusion.Xamarin.SfGauge" Version="19.1.0.54" />
 
 
 
@@ -29,7 +29,13 @@
       <DependentUpon>*.xaml</DependentUpon>
     </Compile>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="MainPage.xaml.cs">
-      <DependentUpon>*.xaml</DependentUpon>
+      <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\ThermostatView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Thermostat.Views.ThermostatView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+    xmlns:controls="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+    xmlns:gauge="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms"
+    xmlns:imageeditor="clr-namespace:Syncfusion.SfImageEditor.XForms;assembly=Syncfusion.SfImageEditor.XForms"
+    xmlns:local="clr-namespace:Thermostat"
+    xmlns:numerictextbox="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
+    xmlns:numericupdown="clr-namespace:Syncfusion.SfNumericUpDown.XForms;assembly=Syncfusion.SfNumericUpDown.XForms"
+    xmlns:viewmodels="clr-namespace:Thermostat.ViewModels"
+    Title="Thermostat">
+    <ContentPage.BindingContext>
+        <viewmodels:ThermostatViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout
+            Margin="20"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal">
+                <controls:SfButton
+                    BackgroundColor="Black"
+                    CornerRadius="5"
+                    ImageSource="settings.png"
+                    ShowIcon="True"
+                    Text="Configure">
+                    <controls:SfButton.Image>
+                        <Image
+                            HeightRequest="20"
+                            Source="settings.png"
+                            WidthRequest="20" />
+                    </controls:SfButton.Image>
+                </controls:SfButton>
+                <controls:SfButton
+                    BackgroundColor="Red"
+                    CornerRadius="5"
+                    HorizontalOptions="EndAndExpand"
+                    ImageSource="star.png"
+                    ShowIcon="True"
+                    Text="Favourite">
+                    <controls:SfButton.Image>
+                        <Image
+                            HeightRequest="20"
+                            Source="star.png"
+                            WidthRequest="20" />
+                    </controls:SfButton.Image>
+                </controls:SfButton>
+            </StackLayout>
+            <gauge:SfCircularGauge VerticalOptions="CenterAndExpand">
+                <gauge:SfCircularGauge.Scales>
+                    <gauge:Scale />
+                </gauge:SfCircularGauge.Scales>
+            </gauge:SfCircularGauge>
+            <controls:SfSegmentedControl
+                Margin="0,-20,0,0"
+                FontColor="White"
+                HorizontalOptions="CenterAndExpand"
+                SegmentBackgroundColor="Gray"
+                SelectionTextColor="White"
+                VerticalOptions="StartAndExpand">
+                <ListCollection:List x:TypeArguments="x:String">
+                    <x:String>Heating</x:String>
+                    <x:String>Cooling</x:String>
+                </ListCollection:List>
+            </controls:SfSegmentedControl>
+            <StackLayout
+                HorizontalOptions="CenterAndExpand"
+                Orientation="Horizontal"
+                VerticalOptions="End">
+                <StackLayout Orientation="Vertical">
+                    <controls:SfButton
+                        BackgroundColor="Black"
+                        CornerRadius="15"
+                        ImageSource="plus.png"
+                        ShowIcon="True">
+                        <controls:SfButton.Image>
+                            <Image
+                                HeightRequest="10"
+                                HorizontalOptions="Center"
+                                Source="plus.png"
+                                WidthRequest="10" />
+                        </controls:SfButton.Image>
+                    </controls:SfButton>
+                    <Label>Decrease</Label>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <controls:SfButton
+                        BackgroundColor="Black"
+                        CornerRadius="15"
+                        ImageSource="plus.png"
+                        ShowIcon="True">
+                        <controls:SfButton.Image>
+                            <Image
+                                HeightRequest="10"
+                                HorizontalOptions="Center"
+                                Source="minus.png"
+                                WidthRequest="10" />
+                        </controls:SfButton.Image>
+                    </controls:SfButton>
+                    <Label>Increase</Label>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -13,7 +13,7 @@ namespace Thermostat
         {
             InitializeComponent();
 
-            MainPage = new Thermostat.MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
