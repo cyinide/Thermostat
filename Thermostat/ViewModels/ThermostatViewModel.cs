@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -26,6 +27,8 @@ namespace Thermostat.ViewModels
         {
             return base.OnAppearing();
         }
+
+        bool isInitial = true;
 
         private ObservableCollection<SfSegmentItem> _segmentedCollection;
         public ObservableCollection<SfSegmentItem> SegmentedCollection
@@ -72,20 +75,31 @@ namespace Thermostat.ViewModels
         }
         private void SetupThermostat(int value)
         {
+            if (isInitial)
+            {
+                SegmentedCollection.ElementAt(1).FontIconFontColor = Color.FromHex("#888889");
+                DesiredTemperature = 22.0;
+                isInitial = false;
+                return;
+            }
             if (value == (int)Mode.Heating)
             {
-                DesiredTemperature = ActualTemperature + 1;
+                DesiredTemperature = ActualTemperature + 1.0;
                 ModeColor = Color.FromHex("#F6392F");
+                SegmentedCollection.ElementAt(0).FontIconFontColor = Color.White;
+                SegmentedCollection.ElementAt(1).FontIconFontColor = Color.FromHex("#888889");
             }
             else
             {
-                DesiredTemperature = ActualTemperature - 1;
+                DesiredTemperature = ActualTemperature - 1.0;
                 ModeColor = Color.FromHex("#392ff6");
+                SegmentedCollection.ElementAt(1).FontIconFontColor = Color.White;
+                SegmentedCollection.ElementAt(0).FontIconFontColor = Color.FromHex("#888889");
             }
         }
 
-        private int _actualTemperature = 17;
-        public int ActualTemperature
+        private double _actualTemperature = 17.0;
+        public double ActualTemperature
         {
             get
             {
@@ -98,8 +112,8 @@ namespace Thermostat.ViewModels
             }
         }
 
-        private int _desiredTemperature = 22;
-        public int DesiredTemperature
+        private double _desiredTemperature;
+        public double DesiredTemperature
         {
             get
             {
@@ -118,7 +132,7 @@ namespace Thermostat.ViewModels
             {
                 return new Command(() =>
                 {
-                    if (SelectedMode == (int)Mode.Heating && DesiredTemperature >= 36)
+                    if (SelectedMode == (int)Mode.Heating && DesiredTemperature >= 36.0)
                         return;
                     if (SelectedMode == (int)Mode.Cooling && DesiredTemperature >= ActualTemperature)
                         return;
@@ -135,7 +149,7 @@ namespace Thermostat.ViewModels
                 {
                     if (SelectedMode == (int)Mode.Heating && DesiredTemperature <= ActualTemperature)
                         return;
-                    if (SelectedMode == (int)Mode.Cooling && DesiredTemperature <= 0)
+                    if (SelectedMode == (int)Mode.Cooling && DesiredTemperature <= 0.0)
                         return;
 
                     --DesiredTemperature;
@@ -144,8 +158,8 @@ namespace Thermostat.ViewModels
         }
         private void SegmentBindings() => SegmentedCollection = new ObservableCollection<SfSegmentItem>
         {
-            new SfSegmentItem(){IconFont = "\xf700", FontIconFontColor=Color.FromHex("#FFFFFF"), FontColor=Color.FromHex("#FFFFFF"), Text = "Heating"},
-            new SfSegmentItem(){IconFont = "\xf700", FontIconFontColor=Color.FromHex("#FFFFFF"), FontColor=Color.FromHex("#FFFFFF"), Text = "Cooling"}
+            new SfSegmentItem(){IconFont = "\xf2c8", Text = "Heating"},
+            new SfSegmentItem(){IconFont = "\xf2dc", Text = "Cooling"}
         };
     }
 }

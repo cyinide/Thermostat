@@ -4,14 +4,38 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     <Application.Resources>
-        <!--  Application resource dictionary  -->
-        <OnPlatform x:Key="FontIcons" x:TypeArguments="x:String">
-            <On Platform="iOS" Value="thermostat_icons_white" />
-            <On Platform="Android" Value="thermostat_icons_white.ttf#thermostat_icons_white" />
-        </OnPlatform>
-        <OnPlatform x:Key="FontIcons2" x:TypeArguments="x:String">
+        <!--  colors  -->
+        <Color x:Key="BackgroundColor">#080808</Color>
+        <Color x:Key="ButtonDefaultColor">#1C1C1E</Color>
+        <Color x:Key="FavouriteBackgroundColor">#F6392f</Color>
+        <Color x:Key="GaugeRimColor">#1C1C1E</Color>
+        <Color x:Key="RangePointerActualColor">#D7D7D7</Color>
+        <Color x:Key="SegmentedMainColor">#38383B</Color>
+        <Color x:Key="SegmentedFontColor">#888889</Color>
+        <!--  fonts  -->
+        <OnPlatform x:Key="DomusBold" x:TypeArguments="x:String">
             <On Platform="iOS" Value="thermostat_icons" />
-            <On Platform="Android" Value="thermostat_icons.ttf#thermostat_icons" />
+            <On Platform="Android" Value="Domus-Bold.otf#Domus-Bold" />
+        </OnPlatform>
+        <OnPlatform x:Key="DomusSemibold" x:TypeArguments="x:String">
+            <On Platform="iOS" Value="Domus-Semibold" />
+            <On Platform="Android" Value="Domus-Semibold.otf#Domus-Semibold" />
+        </OnPlatform>
+        <OnPlatform x:Key="DomusRegular" x:TypeArguments="x:String">
+            <On Platform="iOS" Value="Domus-Regular" />
+            <On Platform="Android" Value="Domus-Regular.otf#Domus-Regular" />
+        </OnPlatform>
+        <OnPlatform x:Key="DomusLight" x:TypeArguments="x:String">
+            <On Platform="iOS" Value="Domus-Light" />
+            <On Platform="Android" Value="Domus-Light.otf#Domus-Light" />
+        </OnPlatform>
+        <OnPlatform x:Key="DomusExtralight" x:TypeArguments="x:String">
+            <On Platform="iOS" Value="Domus-Extralight" />
+            <On Platform="Android" Value="Domus-Extralight.otf#Domus-Extralight" />
+        </OnPlatform>
+        <OnPlatform x:Key="DomusUltralight" x:TypeArguments="x:String">
+            <On Platform="iOS" Value="Domus-Ultralight" />
+            <On Platform="Android" Value="Domus-Ultralight.otf#Domus-Ultralight" />
         </OnPlatform>
     </Application.Resources>
 </Application>

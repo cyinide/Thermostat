@@ -5,17 +5,33 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=mscorlib"
     xmlns:controls="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+    xmlns:converters="clr-namespace:Thermostat.Converters"
     xmlns:gauge="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms"
     xmlns:imageeditor="clr-namespace:Syncfusion.SfImageEditor.XForms;assembly=Syncfusion.SfImageEditor.XForms"
     xmlns:local="clr-namespace:Thermostat"
     xmlns:numerictextbox="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
     xmlns:numericupdown="clr-namespace:Syncfusion.SfNumericUpDown.XForms;assembly=Syncfusion.SfNumericUpDown.XForms"
     xmlns:viewmodels="clr-namespace:Thermostat.ViewModels"
-    Title="Thermostat"
-    BackgroundColor="#080808">
+    BackgroundColor="{StaticResource BackgroundColor}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ActualTemperatureConverter x:Key="ActualTemperatureConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.BindingContext>
         <viewmodels:ThermostatViewModel />
     </ContentPage.BindingContext>
+
+    <NavigationPage.TitleView>
+        <Label
+            Margin="0,0,70,0"
+            FontFamily="{StaticResource DomusBold}"
+            FontSize="20"
+            HorizontalTextAlignment="Center"
+            Text="Thermostat"
+            TextColor="White" />
+    </NavigationPage.TitleView>
     <ContentPage.Content>
         <StackLayout
             Margin="20"
@@ -23,8 +39,10 @@
             VerticalOptions="FillAndExpand">
             <StackLayout Orientation="Horizontal">
                 <controls:SfButton
-                    BackgroundColor="#1C1C1E"
+                    BackgroundColor="{StaticResource ButtonDefaultColor}"
                     CornerRadius="22"
+                    FontFamily="{StaticResource DomusLight}"
+                    FontSize="14"
                     HeightRequest="40"
                     ImageSource="settings.png"
                     ShowIcon="True"
@@ -32,15 +50,17 @@
                     WidthRequest="120">
                     <controls:SfButton.Image>
                         <Image
-                            Margin="8,0,0,0"
+                            Margin="10,0,-10,0"
                             HeightRequest="20"
                             Source="settings.png"
                             WidthRequest="20" />
                     </controls:SfButton.Image>
                 </controls:SfButton>
                 <controls:SfButton
-                    BackgroundColor="#F6392f"
+                    BackgroundColor="{StaticResource FavouriteBackgroundColor}"
                     CornerRadius="22"
+                    FontFamily="{StaticResource DomusLight}"
+                    FontSize="14"
                     HeightRequest="40"
                     HorizontalOptions="EndAndExpand"
                     ImageSource="star.png"
@@ -49,10 +69,10 @@
                     WidthRequest="120">
                     <controls:SfButton.Image>
                         <Image
-                            Margin="8,0,0,0"
-                            HeightRequest="20"
+                            Margin="10,0,-10,0"
+                            HeightRequest="18"
                             Source="star.png"
-                            WidthRequest="20" />
+                            WidthRequest="18" />
                     </controls:SfButton.Image>
                 </controls:SfButton>
             </StackLayout>
@@ -60,26 +80,30 @@
                 <gauge:SfCircularGauge.Headers>
                     <gauge:Header
                         FontAttributes="Bold"
+                        FontFamily="{StaticResource DomusSemibold}"
                         ForegroundColor="White"
-                        Position="0.5,0.3"
+                        Position="0.49,0.3"
                         Text="Set"
-                        TextSize="16" />
+                        TextSize="18" />
                     <gauge:Header
                         FontAttributes="Bold"
+                        FontFamily="{StaticResource DomusBold}"
                         ForegroundColor="White"
                         Position="0.52,0.45"
                         Text="{Binding DesiredTemperature, StringFormat='{0}°'}"
-                        TextSize="45" />
+                        TextSize="55" />
                     <gauge:Header
+                        FontFamily="{StaticResource DomusLight}"
                         ForegroundColor="White"
                         Position="0.5,0.6"
-                        Text="{Binding ActualTemperature, StringFormat='Actual temperature {0}°'}" />
+                        Text="{Binding ActualTemperature, StringFormat='Actual temperature {0}°'}"
+                        TextSize="18" />
                 </gauge:SfCircularGauge.Headers>
                 <gauge:SfCircularGauge.Scales>
                     <gauge:Scale
                         EndValue="36"
                         Interval="1"
-                        RimColor="#1C1C1E"
+                        RimColor="{StaticResource GaugeRimColor}"
                         ShowFirstLabel="False"
                         ShowLabels="False"
                         ShowTicks="False"
@@ -88,8 +112,8 @@
                             <gauge:RangePointer
                                 EnableAnimation="False"
                                 RangeStart="0"
-                                Color="#D7D7D7"
-                                Value="{Binding ActualTemperature}" />
+                                Color="{StaticResource RangePointerActualColor}"
+                                Value="{Binding ActualTemperature, Converter={StaticResource ActualTemperatureConverter}}" />
                             <gauge:RangePointer
                                 EnableAnimation="False"
                                 RangeStart="{Binding ActualTemperature}"
@@ -108,14 +132,18 @@
             </gauge:SfCircularGauge>
             <controls:SfSegmentedControl
                 Margin="0,-20,0,0"
-                BackgroundColor="#38383B"
-                BorderColor="#38383B"
+                BackgroundColor="{StaticResource SegmentedMainColor}"
+                BorderColor="{StaticResource SegmentedMainColor}"
                 CornerRadius="22"
-                DisplayMode="Text"
-                FontColor="#878789"
+                DisplayMode="ImageWithText"
+                FontColor="{StaticResource SegmentedFontColor}"
+                FontFamily="{StaticResource DomusLight}"
+                FontIconFontColor="White"
+                FontIconFontSize="14"
+                FontSize="14"
                 HorizontalOptions="CenterAndExpand"
                 ItemsSource="{Binding SegmentedCollection}"
-                SegmentBackgroundColor="#38383B"
+                SegmentBackgroundColor="{StaticResource SegmentedMainColor}"
                 SegmentBorderColor="Transparent"
                 SegmentCornerRadius="22"
                 SelectedIndex="{Binding SelectedMode}"
@@ -123,11 +151,11 @@
                 VerticalOptions="StartAndExpand"
                 Color="Transparent">
                 <controls:SfSegmentedControl.SelectionIndicatorSettings>
-                    <controls:SelectionIndicatorSettings CornerRadius="22" Color="#1C1C1E" />
+                    <controls:SelectionIndicatorSettings CornerRadius="22" Color="{StaticResource ButtonDefaultColor}" />
                 </controls:SfSegmentedControl.SelectionIndicatorSettings>
-                <!--<controls:SfSegmentedControl.FontIconFontFamily>
-                    <OnPlatform Android="thermostat_icons_white.ttf#thermostat_icons_white" iOS="thermostat_icons_white" />
-                </controls:SfSegmentedControl.FontIconFontFamily>-->
+                <controls:SfSegmentedControl.FontIconFontFamily>
+                    <OnPlatform Android="Font Awesome 5 Free-Solid-900.otf#Font Awesome 5 Free Solid" iOS="Font Awesome 5 Free Solid" />
+                </controls:SfSegmentedControl.FontIconFontFamily>
             </controls:SfSegmentedControl>
             <StackLayout
                 HorizontalOptions="CenterAndExpand"
@@ -136,26 +164,32 @@
                 <StackLayout Margin="10" Orientation="Vertical">
                     <ImageButton
                         Padding="18"
-                        BackgroundColor="#1C1C1E"
+                        BackgroundColor="{StaticResource ButtonDefaultColor}"
                         BorderColor="AntiqueWhite"
                         Command="{Binding DecreaseTemperatureCommand}"
-                        CornerRadius="25"
-                        HeightRequest="50"
+                        CornerRadius="30"
+                        HeightRequest="55"
                         Source="minus.png"
-                        WidthRequest="50" />
-                    <Label Text="Decrease" TextColor="White" />
+                        WidthRequest="55" />
+                    <Label
+                        FontFamily="{StaticResource DomusExtralight}"
+                        Text="Decrease"
+                        TextColor="White" />
                 </StackLayout>
                 <StackLayout Margin="10" Orientation="Vertical">
                     <ImageButton
                         Padding="18"
-                        BackgroundColor="#1C1C1E"
+                        BackgroundColor="{StaticResource ButtonDefaultColor}"
                         BorderColor="AntiqueWhite"
                         Command="{Binding IncreaseTemperatureCommand}"
-                        CornerRadius="25"
-                        HeightRequest="50"
+                        CornerRadius="30"
+                        HeightRequest="55"
                         Source="plus.png"
-                        WidthRequest="50" />
-                    <Label Text=" Increase " TextColor="White" />
+                        WidthRequest="55" />
+                    <Label
+                        FontFamily="{StaticResource DomusExtralight}"
+                        Text=" Increase "
+                        TextColor="White" />
                 </StackLayout>
             </StackLayout>
         </StackLayout>
