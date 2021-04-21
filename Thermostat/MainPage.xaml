@@ -2,16 +2,36 @@
 <ContentPage
     x:Class="Thermostat.MainPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms">
     <StackLayout>
         <Label
+            FontFamily="{StaticResource DomusRegular}"
             HorizontalOptions="CenterAndExpand"
             Text="Welcome to Thermostat!"
+            TextColor="{StaticResource ButtonDefaultColor}"
             VerticalOptions="CenterAndExpand" />
-        <Button
+        <controls:SfButton
+            BackgroundColor="{StaticResource ButtonDefaultColor}"
             Clicked="Button_Clicked"
+            CornerRadius="22"
+            FontFamily="{StaticResource DomusLight}"
+            FontSize="14"
+            HeightRequest="40"
             HorizontalOptions="CenterAndExpand"
+            ImageSource="rocket.png"
+            ShowIcon="True"
             Text="Launch"
-            VerticalOptions="CenterAndExpand" />
+            TextColor="White"
+            VerticalOptions="CenterAndExpand"
+            WidthRequest="120">
+            <controls:SfButton.Image>
+                <Image
+                    Margin="10,0,-10,0"
+                    HeightRequest="26"
+                    Source="rocket.png"
+                    WidthRequest="26" />
+            </controls:SfButton.Image>
+        </controls:SfButton>
     </StackLayout>
 </ContentPage>

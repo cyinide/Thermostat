@@ -16,7 +16,7 @@ namespace Thermostat
         }
         private void Button_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new ThermostatView());
+            Navigation.PushAsync(new ThermostatView(), true);
         }
     }
 }
