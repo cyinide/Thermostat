@@ -1,7 +1,10 @@
-﻿using System;
+﻿using Syncfusion.XForms.Buttons;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using Thermostat.ViewModels.Base;
+using Xamarin.Forms;
 
 namespace Thermostat.ViewModels
 {
@@ -9,20 +12,18 @@ namespace Thermostat.ViewModels
     {
         public ThermostatViewModel()
         {
-
-        }
-        public string _stringtest = "teststring";
-        public string StringTest
+            SegmentedCollection = new ObservableCollection<SfSegmentItem>
         {
-            get
-            {
-                return _stringtest;
-            }
-            set
-            {
-                _stringtest = value;
-                RaisePropertyChanged(() => StringTest);
-            }
+            new SfSegmentItem(){IconFont = "6", FontIconFontColor=Color.FromHex("#FFFFFF"), FontColor=Color.FromHex("#FFFFFF"), Text = "Day"},
+            new SfSegmentItem(){IconFont = "6", FontIconFontColor=Color.FromHex("#FFFFFF"), FontColor=Color.FromHex("#FFFFFF"), Text = "Week"}
+        };
+        }
+
+        private ObservableCollection<SfSegmentItem> _segmentedCollection;
+        public ObservableCollection<SfSegmentItem> SegmentedCollection
+        {
+            get { return _segmentedCollection; }
+            set { _segmentedCollection = value; }
         }
     }
 }

@@ -11,7 +11,8 @@
     xmlns:numerictextbox="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
     xmlns:numericupdown="clr-namespace:Syncfusion.SfNumericUpDown.XForms;assembly=Syncfusion.SfNumericUpDown.XForms"
     xmlns:viewmodels="clr-namespace:Thermostat.ViewModels"
-    Title="Thermostat">
+    Title="Thermostat"
+    BackgroundColor="#080808">
     <ContentPage.BindingContext>
         <viewmodels:ThermostatViewModel />
     </ContentPage.BindingContext>
@@ -22,27 +23,33 @@
             VerticalOptions="FillAndExpand">
             <StackLayout Orientation="Horizontal">
                 <controls:SfButton
-                    BackgroundColor="Black"
-                    CornerRadius="5"
+                    BackgroundColor="#1C1C1E"
+                    CornerRadius="22"
+                    HeightRequest="40"
                     ImageSource="settings.png"
                     ShowIcon="True"
-                    Text="Configure">
+                    Text="Configure"
+                    WidthRequest="120">
                     <controls:SfButton.Image>
                         <Image
+                            Margin="8,0,0,0"
                             HeightRequest="20"
                             Source="settings.png"
                             WidthRequest="20" />
                     </controls:SfButton.Image>
                 </controls:SfButton>
                 <controls:SfButton
-                    BackgroundColor="Red"
-                    CornerRadius="5"
+                    BackgroundColor="#F6392f"
+                    CornerRadius="22"
+                    HeightRequest="40"
                     HorizontalOptions="EndAndExpand"
                     ImageSource="star.png"
                     ShowIcon="True"
-                    Text="Favourite">
+                    Text="Favourite"
+                    WidthRequest="120">
                     <controls:SfButton.Image>
                         <Image
+                            Margin="8,0,0,0"
                             HeightRequest="20"
                             Source="star.png"
                             WidthRequest="20" />
@@ -53,18 +60,18 @@
                 <gauge:SfCircularGauge.Headers>
                     <gauge:Header
                         FontAttributes="Bold"
-                        ForegroundColor="Black"
+                        ForegroundColor="White"
                         Position="0.5,0.3"
                         Text="Set"
                         TextSize="16" />
                     <gauge:Header
                         FontAttributes="Bold"
-                        ForegroundColor="Black"
+                        ForegroundColor="White"
                         Position="0.52,0.45"
                         Text="22°"
                         TextSize="45" />
                     <gauge:Header
-                        ForegroundColor="Black"
+                        ForegroundColor="White"
                         Position="0.5,0.6"
                         Text="Actual temperature 17°" />
                 </gauge:SfCircularGauge.Headers>
@@ -79,17 +86,17 @@
                         <gauge:Scale.Pointers>
                             <gauge:RangePointer
                                 RangeStart="0"
-                                Color="Gray"
+                                Color="#D7D7D7"
                                 Value="16.9" />
                             <gauge:RangePointer
                                 RangeStart="17"
-                                Color="Red"
+                                Color="#F6392F"
                                 Value="22" />
                             <gauge:MarkerPointer
                                 MarkerHeight="20"
                                 MarkerShape="Circle"
                                 MarkerWidth="20"
-                                Color="Black"
+                                Color="White"
                                 Value="22" />
                         </gauge:Scale.Pointers>
                     </gauge:Scale>
@@ -97,23 +104,32 @@
             </gauge:SfCircularGauge>
             <controls:SfSegmentedControl
                 Margin="0,-20,0,0"
-                FontColor="White"
+                BackgroundColor="#38383B"
+                BorderColor="#38383B"
+                CornerRadius="22"
+                FontColor="#878789"
                 HorizontalOptions="CenterAndExpand"
-                SegmentBackgroundColor="Gray"
+                SegmentBackgroundColor="#38383B"
+                SegmentBorderColor="Transparent"
+                SegmentCornerRadius="22"
                 SelectionTextColor="White"
-                VerticalOptions="StartAndExpand">
+                VerticalOptions="StartAndExpand"
+                Color="Transparent">
                 <ListCollection:List x:TypeArguments="x:String">
                     <x:String>Heating</x:String>
                     <x:String>Cooling</x:String>
                 </ListCollection:List>
+                <controls:SfSegmentedControl.SelectionIndicatorSettings>
+                    <controls:SelectionIndicatorSettings CornerRadius="22" Color="#1C1C1E" />
+                </controls:SfSegmentedControl.SelectionIndicatorSettings>
             </controls:SfSegmentedControl>
             <StackLayout
                 HorizontalOptions="CenterAndExpand"
                 Orientation="Horizontal"
                 VerticalOptions="End">
-                <StackLayout Orientation="Vertical">
+                <StackLayout Margin="10" Orientation="Vertical">
                     <controls:SfButton
-                        BackgroundColor="Black"
+                        BackgroundColor="#1C1C1E"
                         CornerRadius="15"
                         ImageSource="plus.png"
                         ShowIcon="True">
@@ -125,11 +141,11 @@
                                 WidthRequest="10" />
                         </controls:SfButton.Image>
                     </controls:SfButton>
-                    <Label>Decrease</Label>
+                    <Label Text="Decrease" TextColor="White" />
                 </StackLayout>
-                <StackLayout Orientation="Vertical">
+                <StackLayout Margin="10" Orientation="Vertical">
                     <controls:SfButton
-                        BackgroundColor="Black"
+                        BackgroundColor="#1C1C1E"
                         CornerRadius="15"
                         ImageSource="plus.png"
                         ShowIcon="True">
@@ -141,7 +157,7 @@
                                 WidthRequest="10" />
                         </controls:SfButton.Image>
                     </controls:SfButton>
-                    <Label>Increase</Label>
+                    <Label Text="Increase" TextColor="White" />
                 </StackLayout>
             </StackLayout>
         </StackLayout>

@@ -13,7 +13,10 @@ namespace Thermostat
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new MainPage())
+            {
+                BarBackgroundColor = Color.FromHex("#080808"),
+            };
         }
 
         protected override void OnStart()

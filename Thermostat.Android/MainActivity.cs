@@ -13,9 +13,11 @@ namespace Thermostat.Android
     {
         protected override void OnCreate(Bundle bundle)
         {
-
             Syncfusion.Licensing.SyncfusionLicenseProvider
                 .RegisterLicense("NDMzNTM3QDMxMzkyZTMxMmUzMFdyL1BjcFhFWkF5bGJxSktQbXI1aWM0d0lPVEViZkNad2htd1lXRCtLd0k9");
+
+            Window.AddFlags(WindowManagerFlags.Fullscreen);
+            Window.ClearFlags(WindowManagerFlags.ForceNotFullscreen);
 
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;

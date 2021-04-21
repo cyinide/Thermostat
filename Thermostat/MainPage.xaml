@@ -8,7 +8,6 @@
             HorizontalOptions="CenterAndExpand"
             Text="Welcome to Thermostat!"
             VerticalOptions="CenterAndExpand" />
-
         <Button
             Clicked="Button_Clicked"
             HorizontalOptions="CenterAndExpand"
