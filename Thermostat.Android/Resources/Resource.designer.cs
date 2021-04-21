@@ -25,6 +25,28 @@ namespace Thermostat.Android
 		
 		public static void UpdateIdValues()
 		{
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_dialog_actioned_on_disabled_toast = global::Thermostat.Android.Resource.String.appcenter_distribute_dialog_actioned_on_disabled_toast;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_download_progress_number_format = global::Thermostat.Android.Resource.String.appcenter_distribute_download_progress_number_format;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_downloading_error = global::Thermostat.Android.Resource.String.appcenter_distribute_downloading_error;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_downloading_mandatory_update = global::Thermostat.Android.Resource.String.appcenter_distribute_downloading_mandatory_update;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_downloading_update = global::Thermostat.Android.Resource.String.appcenter_distribute_downloading_update;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_downloading_version = global::Thermostat.Android.Resource.String.appcenter_distribute_downloading_version;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_install = global::Thermostat.Android.Resource.String.appcenter_distribute_install;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_install_ready_message = global::Thermostat.Android.Resource.String.appcenter_distribute_install_ready_message;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_install_ready_title = global::Thermostat.Android.Resource.String.appcenter_distribute_install_ready_title;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_notification_category = global::Thermostat.Android.Resource.String.appcenter_distribute_notification_category;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_unknown_sources_dialog_message = global::Thermostat.Android.Resource.String.appcenter_distribute_unknown_sources_dialog_message;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_unknown_sources_dialog_settings = global::Thermostat.Android.Resource.String.appcenter_distribute_unknown_sources_dialog_settings;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_dialog_download = global::Thermostat.Android.Resource.String.appcenter_distribute_update_dialog_download;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_dialog_message_mandatory = global::Thermostat.Android.Resource.String.appcenter_distribute_update_dialog_message_mandatory;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_dialog_message_optional = global::Thermostat.Android.Resource.String.appcenter_distribute_update_dialog_message_optional;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_dialog_postpone = global::Thermostat.Android.Resource.String.appcenter_distribute_update_dialog_postpone;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_dialog_title = global::Thermostat.Android.Resource.String.appcenter_distribute_update_dialog_title;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_dialog_view_release_notes = global::Thermostat.Android.Resource.String.appcenter_distribute_update_dialog_view_release_notes;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_failed_dialog_ignore = global::Thermostat.Android.Resource.String.appcenter_distribute_update_failed_dialog_ignore;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_failed_dialog_message = global::Thermostat.Android.Resource.String.appcenter_distribute_update_failed_dialog_message;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_failed_dialog_reinstall = global::Thermostat.Android.Resource.String.appcenter_distribute_update_failed_dialog_reinstall;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_failed_dialog_title = global::Thermostat.Android.Resource.String.appcenter_distribute_update_failed_dialog_title;
 			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.sfcheckbox_indeterminate_checked_inner = global::Thermostat.Android.Resource.Animation.sfcheckbox_indeterminate_checked_inner;
 			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.sfcheckbox_indeterminate_checked_null = global::Thermostat.Android.Resource.Animation.sfcheckbox_indeterminate_checked_null;
 			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.sfcheckbox_unchecked_inner = global::Thermostat.Android.Resource.Animation.sfcheckbox_unchecked_inner;
@@ -10907,125 +10929,191 @@ namespace Thermostat.Android
 			// aapt resource value: 0x7F0C002C
 			public const int appbar_scrolling_view_behavior = 2131492908;
 			
+			// aapt resource value: 0x7F0C002D
+			public const int appcenter_distribute_dialog_actioned_on_disabled_toast = 2131492909;
+			
+			// aapt resource value: 0x7F0C002F
+			public const int appcenter_distribute_downloading_error = 2131492911;
+			
+			// aapt resource value: 0x7F0C0030
+			public const int appcenter_distribute_downloading_mandatory_update = 2131492912;
+			
+			// aapt resource value: 0x7F0C0031
+			public const int appcenter_distribute_downloading_update = 2131492913;
+			
+			// aapt resource value: 0x7F0C0032
+			public const int appcenter_distribute_downloading_version = 2131492914;
+			
+			// aapt resource value: 0x7F0C002E
+			public const int appcenter_distribute_download_progress_number_format = 2131492910;
+			
+			// aapt resource value: 0x7F0C0033
+			public const int appcenter_distribute_install = 2131492915;
+			
+			// aapt resource value: 0x7F0C0034
+			public const int appcenter_distribute_install_ready_message = 2131492916;
+			
+			// aapt resource value: 0x7F0C0035
+			public const int appcenter_distribute_install_ready_title = 2131492917;
+			
+			// aapt resource value: 0x7F0C0036
+			public const int appcenter_distribute_notification_category = 2131492918;
+			
+			// aapt resource value: 0x7F0C0037
+			public const int appcenter_distribute_unknown_sources_dialog_message = 2131492919;
+			
+			// aapt resource value: 0x7F0C0038
+			public const int appcenter_distribute_unknown_sources_dialog_settings = 2131492920;
+			
+			// aapt resource value: 0x7F0C0039
+			public const int appcenter_distribute_update_dialog_download = 2131492921;
+			
+			// aapt resource value: 0x7F0C003A
+			public const int appcenter_distribute_update_dialog_message_mandatory = 2131492922;
+			
+			// aapt resource value: 0x7F0C003B
+			public const int appcenter_distribute_update_dialog_message_optional = 2131492923;
+			
+			// aapt resource value: 0x7F0C003C
+			public const int appcenter_distribute_update_dialog_postpone = 2131492924;
+			
+			// aapt resource value: 0x7F0C003D
+			public const int appcenter_distribute_update_dialog_title = 2131492925;
+			
+			// aapt resource value: 0x7F0C003E
+			public const int appcenter_distribute_update_dialog_view_release_notes = 2131492926;
+			
+			// aapt resource value: 0x7F0C003F
+			public const int appcenter_distribute_update_failed_dialog_ignore = 2131492927;
+			
+			// aapt resource value: 0x7F0C0040
+			public const int appcenter_distribute_update_failed_dialog_message = 2131492928;
+			
+			// aapt resource value: 0x7F0C0041
+			public const int appcenter_distribute_update_failed_dialog_reinstall = 2131492929;
+			
+			// aapt resource value: 0x7F0C0042
+			public const int appcenter_distribute_update_failed_dialog_title = 2131492930;
+			
 			// aapt resource value: 0x7F0C0000
 			public const int ApplicationName = 2131492864;
 			
-			// aapt resource value: 0x7F0C002D
-			public const int blur = 2131492909;
+			// aapt resource value: 0x7F0C0043
+			public const int blur = 2131492931;
 			
-			// aapt resource value: 0x7F0C002E
-			public const int bottom_sheet_behavior = 2131492910;
+			// aapt resource value: 0x7F0C0044
+			public const int bottom_sheet_behavior = 2131492932;
 			
-			// aapt resource value: 0x7F0C002F
-			public const int brightness = 2131492911;
+			// aapt resource value: 0x7F0C0045
+			public const int brightness = 2131492933;
 			
-			// aapt resource value: 0x7F0C0030
-			public const int cancel = 2131492912;
+			// aapt resource value: 0x7F0C0046
+			public const int cancel = 2131492934;
 			
-			// aapt resource value: 0x7F0C0031
-			public const int character_counter_content_description = 2131492913;
+			// aapt resource value: 0x7F0C0047
+			public const int character_counter_content_description = 2131492935;
 			
-			// aapt resource value: 0x7F0C0032
-			public const int character_counter_pattern = 2131492914;
+			// aapt resource value: 0x7F0C0048
+			public const int character_counter_pattern = 2131492936;
 			
-			// aapt resource value: 0x7F0C0033
-			public const int circular = 2131492915;
+			// aapt resource value: 0x7F0C0049
+			public const int circular = 2131492937;
 			
-			// aapt resource value: 0x7F0C0034
-			public const int contrast = 2131492916;
+			// aapt resource value: 0x7F0C004A
+			public const int contrast = 2131492938;
 			
 			// aapt resource value: 0x7F0C0001
 			public const int Crop = 2131492865;
 			
-			// aapt resource value: 0x7F0C0035
-			public const int editText = 2131492917;
+			// aapt resource value: 0x7F0C004B
+			public const int editText = 2131492939;
 			
-			// aapt resource value: 0x7F0C0036
-			public const int ellipse = 2131492918;
+			// aapt resource value: 0x7F0C004C
+			public const int ellipse = 2131492940;
 			
 			// aapt resource value: 0x7F0C0002
 			public const int EnterText = 2131492866;
 			
-			// aapt resource value: 0x7F0C0037
-			public const int fab_transformation_scrim_behavior = 2131492919;
+			// aapt resource value: 0x7F0C004D
+			public const int fab_transformation_scrim_behavior = 2131492941;
 			
-			// aapt resource value: 0x7F0C0038
-			public const int fab_transformation_sheet_behavior = 2131492920;
+			// aapt resource value: 0x7F0C004E
+			public const int fab_transformation_sheet_behavior = 2131492942;
 			
-			// aapt resource value: 0x7F0C0039
-			public const int fill = 2131492921;
+			// aapt resource value: 0x7F0C004F
+			public const int fill = 2131492943;
 			
-			// aapt resource value: 0x7F0C003A
-			public const int free = 2131492922;
+			// aapt resource value: 0x7F0C0050
+			public const int free = 2131492944;
 			
 			// aapt resource value: 0x7F0C0003
 			public const int Hello = 2131492867;
 			
-			// aapt resource value: 0x7F0C003B
-			public const int hide_bottom_view_on_scroll_behavior = 2131492923;
+			// aapt resource value: 0x7F0C0051
+			public const int hide_bottom_view_on_scroll_behavior = 2131492945;
 			
-			// aapt resource value: 0x7F0C003C
-			public const int hue = 2131492924;
+			// aapt resource value: 0x7F0C0052
+			public const int hue = 2131492946;
 			
-			// aapt resource value: 0x7F0C003D
-			public const int library_name = 2131492925;
+			// aapt resource value: 0x7F0C0053
+			public const int library_name = 2131492947;
 			
-			// aapt resource value: 0x7F0C003E
-			public const int mtrl_chip_close_icon_content_description = 2131492926;
+			// aapt resource value: 0x7F0C0054
+			public const int mtrl_chip_close_icon_content_description = 2131492948;
 			
-			// aapt resource value: 0x7F0C003F
-			public const int ok = 2131492927;
+			// aapt resource value: 0x7F0C0055
+			public const int ok = 2131492949;
 			
-			// aapt resource value: 0x7F0C0040
-			public const int original = 2131492928;
+			// aapt resource value: 0x7F0C0056
+			public const int original = 2131492950;
 			
-			// aapt resource value: 0x7F0C0041
-			public const int outline = 2131492929;
+			// aapt resource value: 0x7F0C0057
+			public const int outline = 2131492951;
 			
-			// aapt resource value: 0x7F0C0042
-			public const int password_toggle_content_description = 2131492930;
+			// aapt resource value: 0x7F0C0058
+			public const int password_toggle_content_description = 2131492952;
 			
-			// aapt resource value: 0x7F0C0043
-			public const int path_password_eye = 2131492931;
+			// aapt resource value: 0x7F0C0059
+			public const int path_password_eye = 2131492953;
 			
-			// aapt resource value: 0x7F0C0044
-			public const int path_password_eye_mask_strike_through = 2131492932;
+			// aapt resource value: 0x7F0C005A
+			public const int path_password_eye_mask_strike_through = 2131492954;
 			
-			// aapt resource value: 0x7F0C0045
-			public const int path_password_eye_mask_visible = 2131492933;
+			// aapt resource value: 0x7F0C005B
+			public const int path_password_eye_mask_visible = 2131492955;
 			
-			// aapt resource value: 0x7F0C0046
-			public const int path_password_strike_through = 2131492934;
+			// aapt resource value: 0x7F0C005C
+			public const int path_password_strike_through = 2131492956;
 			
-			// aapt resource value: 0x7F0C0047
-			public const int reset = 2131492935;
+			// aapt resource value: 0x7F0C005D
+			public const int reset = 2131492957;
 			
-			// aapt resource value: 0x7F0C0048
-			public const int saturation = 2131492936;
+			// aapt resource value: 0x7F0C005E
+			public const int saturation = 2131492958;
 			
-			// aapt resource value: 0x7F0C0049
-			public const int save = 2131492937;
+			// aapt resource value: 0x7F0C005F
+			public const int save = 2131492959;
 			
-			// aapt resource value: 0x7F0C004A
-			public const int saving = 2131492938;
+			// aapt resource value: 0x7F0C0060
+			public const int saving = 2131492960;
 			
-			// aapt resource value: 0x7F0C004B
-			public const int search_menu_title = 2131492939;
+			// aapt resource value: 0x7F0C0061
+			public const int search_menu_title = 2131492961;
 			
-			// aapt resource value: 0x7F0C004C
-			public const int sfnumericupdown_decrement_button_accessibility_label = 2131492940;
+			// aapt resource value: 0x7F0C0062
+			public const int sfnumericupdown_decrement_button_accessibility_label = 2131492962;
 			
-			// aapt resource value: 0x7F0C004D
-			public const int sfnumericupdown_increment_button_accessibility_label = 2131492941;
+			// aapt resource value: 0x7F0C0063
+			public const int sfnumericupdown_increment_button_accessibility_label = 2131492963;
 			
-			// aapt resource value: 0x7F0C004E
-			public const int sharpen = 2131492942;
+			// aapt resource value: 0x7F0C0064
+			public const int sharpen = 2131492964;
 			
-			// aapt resource value: 0x7F0C004F
-			public const int square = 2131492943;
+			// aapt resource value: 0x7F0C0065
+			public const int square = 2131492965;
 			
-			// aapt resource value: 0x7F0C0050
-			public const int status_bar_notification_info_overflow = 2131492944;
+			// aapt resource value: 0x7F0C0066
+			public const int status_bar_notification_info_overflow = 2131492966;
 			
 			static String()
 			{
