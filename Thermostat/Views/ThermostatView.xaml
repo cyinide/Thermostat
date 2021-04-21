@@ -68,36 +68,40 @@
                         FontAttributes="Bold"
                         ForegroundColor="White"
                         Position="0.52,0.45"
-                        Text="22°"
+                        Text="{Binding DesiredTemperature, StringFormat='{0}°'}"
                         TextSize="45" />
                     <gauge:Header
                         ForegroundColor="White"
                         Position="0.5,0.6"
-                        Text="Actual temperature 17°" />
+                        Text="{Binding ActualTemperature, StringFormat='Actual temperature {0}°'}" />
                 </gauge:SfCircularGauge.Headers>
                 <gauge:SfCircularGauge.Scales>
                     <gauge:Scale
                         EndValue="36"
                         Interval="1"
+                        RimColor="#1C1C1E"
                         ShowFirstLabel="False"
                         ShowLabels="False"
                         ShowTicks="False"
                         StartValue="0">
                         <gauge:Scale.Pointers>
                             <gauge:RangePointer
+                                EnableAnimation="False"
                                 RangeStart="0"
                                 Color="#D7D7D7"
-                                Value="16.9" />
+                                Value="{Binding ActualTemperature}" />
                             <gauge:RangePointer
-                                RangeStart="17"
-                                Color="#F6392F"
-                                Value="22" />
+                                EnableAnimation="False"
+                                RangeStart="{Binding ActualTemperature}"
+                                Color="{Binding ModeColor}"
+                                Value="{Binding DesiredTemperature}" />
                             <gauge:MarkerPointer
+                                EnableAnimation="False"
                                 MarkerHeight="20"
                                 MarkerShape="Circle"
                                 MarkerWidth="20"
                                 Color="White"
-                                Value="22" />
+                                Value="{Binding DesiredTemperature}" />
                         </gauge:Scale.Pointers>
                     </gauge:Scale>
                 </gauge:SfCircularGauge.Scales>
@@ -114,6 +118,7 @@
                 SegmentBackgroundColor="#38383B"
                 SegmentBorderColor="Transparent"
                 SegmentCornerRadius="22"
+                SelectedIndex="{Binding SelectedMode}"
                 SelectionTextColor="White"
                 VerticalOptions="StartAndExpand"
                 Color="Transparent">
@@ -133,6 +138,7 @@
                         Padding="18"
                         BackgroundColor="#1C1C1E"
                         BorderColor="AntiqueWhite"
+                        Command="{Binding DecreaseTemperatureCommand}"
                         CornerRadius="25"
                         HeightRequest="50"
                         Source="minus.png"
@@ -144,6 +150,7 @@
                         Padding="18"
                         BackgroundColor="#1C1C1E"
                         BorderColor="AntiqueWhite"
+                        Command="{Binding IncreaseTemperatureCommand}"
                         CornerRadius="25"
                         HeightRequest="50"
                         Source="plus.png"

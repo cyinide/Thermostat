@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Thermostat.ViewModels.Base;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +15,6 @@ namespace Thermostat.Views
         public ThermostatView()
         {
             InitializeComponent();
-        }
+        } 
     }
 }
