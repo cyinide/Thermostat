@@ -14,8 +14,8 @@ namespace Thermostat.ViewModels
         {
             SegmentedCollection = new ObservableCollection<SfSegmentItem>
         {
-            new SfSegmentItem(){IconFont = "6", FontIconFontColor=Color.FromHex("#FFFFFF"), FontColor=Color.FromHex("#FFFFFF"), Text = "Heating"},
-            new SfSegmentItem(){IconFont = "6", FontIconFontColor=Color.FromHex("#FFFFFF"), FontColor=Color.FromHex("#FFFFFF"), Text = "Cooling"}
+            new SfSegmentItem(){IconFont = "\xf700", FontIconFontColor=Color.FromHex("#FFFFFF"), FontColor=Color.FromHex("#FFFFFF"), Text = "Heating"},
+            new SfSegmentItem(){IconFont = "\xf700", FontIconFontColor=Color.FromHex("#FFFFFF"), FontColor=Color.FromHex("#FFFFFF"), Text = "Cooling"}
         };
         }
 

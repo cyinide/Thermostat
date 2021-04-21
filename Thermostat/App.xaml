@@ -5,5 +5,13 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     <Application.Resources>
         <!--  Application resource dictionary  -->
+        <OnPlatform x:Key="FontIcons" x:TypeArguments="x:String">
+            <On Platform="iOS" Value="thermostat_icons_white" />
+            <On Platform="Android" Value="thermostat_icons_white.ttf#thermostat_icons_white" />
+        </OnPlatform>
+        <OnPlatform x:Key="FontIcons2" x:TypeArguments="x:String">
+            <On Platform="iOS" Value="thermostat_icons" />
+            <On Platform="Android" Value="thermostat_icons.ttf#thermostat_icons" />
+        </OnPlatform>
     </Application.Resources>
 </Application>

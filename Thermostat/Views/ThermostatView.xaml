@@ -107,57 +107,48 @@
                 BackgroundColor="#38383B"
                 BorderColor="#38383B"
                 CornerRadius="22"
+                DisplayMode="Text"
                 FontColor="#878789"
                 HorizontalOptions="CenterAndExpand"
+                ItemsSource="{Binding SegmentedCollection}"
                 SegmentBackgroundColor="#38383B"
                 SegmentBorderColor="Transparent"
                 SegmentCornerRadius="22"
                 SelectionTextColor="White"
                 VerticalOptions="StartAndExpand"
                 Color="Transparent">
-                <ListCollection:List x:TypeArguments="x:String">
-                    <x:String>Heating</x:String>
-                    <x:String>Cooling</x:String>
-                </ListCollection:List>
                 <controls:SfSegmentedControl.SelectionIndicatorSettings>
                     <controls:SelectionIndicatorSettings CornerRadius="22" Color="#1C1C1E" />
                 </controls:SfSegmentedControl.SelectionIndicatorSettings>
+                <!--<controls:SfSegmentedControl.FontIconFontFamily>
+                    <OnPlatform Android="thermostat_icons_white.ttf#thermostat_icons_white" iOS="thermostat_icons_white" />
+                </controls:SfSegmentedControl.FontIconFontFamily>-->
             </controls:SfSegmentedControl>
             <StackLayout
                 HorizontalOptions="CenterAndExpand"
                 Orientation="Horizontal"
-                VerticalOptions="End">
+                VerticalOptions="EndAndExpand">
                 <StackLayout Margin="10" Orientation="Vertical">
-                    <controls:SfButton
+                    <ImageButton
+                        Padding="18"
                         BackgroundColor="#1C1C1E"
-                        CornerRadius="15"
-                        ImageSource="plus.png"
-                        ShowIcon="True">
-                        <controls:SfButton.Image>
-                            <Image
-                                HeightRequest="10"
-                                HorizontalOptions="Center"
-                                Source="plus.png"
-                                WidthRequest="10" />
-                        </controls:SfButton.Image>
-                    </controls:SfButton>
+                        BorderColor="AntiqueWhite"
+                        CornerRadius="25"
+                        HeightRequest="50"
+                        Source="minus.png"
+                        WidthRequest="50" />
                     <Label Text="Decrease" TextColor="White" />
                 </StackLayout>
                 <StackLayout Margin="10" Orientation="Vertical">
-                    <controls:SfButton
+                    <ImageButton
+                        Padding="18"
                         BackgroundColor="#1C1C1E"
-                        CornerRadius="15"
-                        ImageSource="plus.png"
-                        ShowIcon="True">
-                        <controls:SfButton.Image>
-                            <Image
-                                HeightRequest="10"
-                                HorizontalOptions="Center"
-                                Source="minus.png"
-                                WidthRequest="10" />
-                        </controls:SfButton.Image>
-                    </controls:SfButton>
-                    <Label Text="Increase" TextColor="White" />
+                        BorderColor="AntiqueWhite"
+                        CornerRadius="25"
+                        HeightRequest="50"
+                        Source="plus.png"
+                        WidthRequest="50" />
+                    <Label Text=" Increase " TextColor="White" />
                 </StackLayout>
             </StackLayout>
         </StackLayout>
